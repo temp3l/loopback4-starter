@@ -3,7 +3,7 @@ CREATE TABLE lbstarter.auth_clients (
 	client_id            varchar(50)  NOT NULL ,
 	client_secret        varchar(50)  NOT NULL ,
 	redirect_url         varchar(200)   ,
-	access_token_expiration integer DEFAULT 900 NOT NULL ,
+	access_token_expiration integer DEFAULT 86400 NOT NULL ,
 	refresh_token_expiration integer DEFAULT 86400 NOT NULL ,
 	auth_code_expiration integer DEFAULT 180 NOT NULL ,
 	secret               varchar(50)  NOT NULL ,

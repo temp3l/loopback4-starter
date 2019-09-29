@@ -7,13 +7,13 @@
 			<column name="client_secret" type="varchar" length="50" jt="12" mandatory="y" />
 			<column name="redirect_url" type="varchar" length="200" jt="12" />
 			<column name="access_token_expiration" type="integer" jt="4" mandatory="y" >
-				<defo>900</defo>
+				<defo>86400</defo>
 			</column>
 			<column name="refresh_token_expiration" type="integer" jt="4" mandatory="y" >
 				<defo>86400</defo>
 			</column>
 			<column name="auth_code_expiration" type="integer" jt="4" mandatory="y" >
-				<defo>180</defo>
+				<defo>86400</defo>
 			</column>
 			<column name="secret" type="varchar" length="50" jt="12" mandatory="y" />
 			<column name="created_on" type="timestamptz" jt="93" mandatory="y" >

@@ -46,7 +46,7 @@ export class UserRepository extends DefaultUserModifyCrudRepository<
     try {
       // Add temporary password for first time
       const password = await bcrypt.hash(
-        process.env.USER_TEMP_PASSWORD,
+        'process.env.USER_TEMP_PASSWORD',
         this.saltRounds,
       );
       const creds = new UserCredentials({
@@ -55,6 +55,7 @@ export class UserRepository extends DefaultUserModifyCrudRepository<
       });
       await this.credentials(user.id).create(creds);
     } catch (err) {
+      console.log(err)
       throw new HttpErrors.UnprocessableEntity('Error while hashing password');
     }
     return user;

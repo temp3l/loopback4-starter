@@ -20,7 +20,7 @@ export class UserCredentials extends BaseEntity {
       required: true,
     },
   )
-  userId: number;
+  userId?: number;
 
   @property({
     type: 'number',
